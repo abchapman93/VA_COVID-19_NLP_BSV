@@ -17,8 +17,7 @@ The tutorials in [./notebooks](./notebooks) show how each component works, how y
 components to the pipeline.
 
 # Overview
-This repository implements a version of the system described in **A Natural Language Processing System for National 
-COVID-19 Surveillance in the US Department of Veterans Affairs** (add link to open review.) 
+This repository implements a version of the system described in [A Natural Language Processing System for National COVID-19 Surveillance in the US Department of Veterans Affairs](https://openreview.net/forum?id=ZQ_HvBxcdCv).
 
 The NLP system is designed as a [spaCy](https://spacy.io/) processing pipeline. Most components are implemented as part of the
 [medSpaCy](https://github.com/medspacy/medspacy) package. 
