@@ -157,7 +157,7 @@ context_item_data = [
         rule="FORWARD",
         pattern=[{"LOWER": {"IN": ["negative", "neg"]}}, {"LOWER": "for"}],
     ),
-    ConTextItem("is negative for", "NEGATED_EXISTENCE", rule="FORWARD"),
+    # ConTextItem("is negative for", "NEGATED_EXISTENCE", rule="FORWARD"),
     ConTextItem("not positive", "NEGATED_EXISTENCE", rule="BIDIRECTIONAL"),
     ConTextItem(
         "excluded", "NEGATED_EXISTENCE", rule="BIDIRECTIONAL", max_scope=4
@@ -204,7 +204,7 @@ context_item_data = [
     ConTextItem(
         "is negative",
         "NEGATED_EXISTENCE",
-        rule="BACKWARD",
+        rule="BIDIRECTIONAL",
         pattern=[{"LEMMA": "be"}, {"LOWER": "negative"}],
     ),
     ConTextItem(
