@@ -1,7 +1,7 @@
 # VA_COVID-19_NLP
 An NLP pipeline for COVID-19 surveillance used in the Department of Veterans Affairs Biosurveillance.
 This system is described in [A Natural Language Processing System for National COVID-19 Surveillance in the US Department of Veterans Affairs](https://openreview.net/forum?id=ZQ_HvBxcdCv)
-by Chapman et al as part of the [ACL COVID-19 Emergency Workshop](https://www.nlpcovid19workshop.org/) (pending review as of **7/6/2020**).
+by Chapman et al as part of the [ACL COVID-19 Emergency Workshop](https://www.nlpcovid19workshop.org/).
 
 Our system was deployed as part of the VA response to the COVID-19 pandemic and has helped to identify a large number
 of COVID-19 cases in the national VA healthcare system.
