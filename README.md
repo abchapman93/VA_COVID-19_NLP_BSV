@@ -35,8 +35,13 @@ attributes are assigned
 A detailed tutorial and explanation is provided in [./notebooks](./notebooks).
 
 ## Installation
+You can install `cov_bsv` using pip:
 
-You can install `cov_bsv` by cloning this repository and installing using `setup.py`:
+```bash
+$ pip install cov-bsv
+```
+
+Or by cloning this repository and installing using `setup.py`:
 ```bash
 $ python setup.py install
 ```
