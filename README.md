@@ -32,7 +32,12 @@ The pipeline consists of the following main pieces:
 attributes are assigned
 
 # Usage
-A detailed tutorial and explanation is provided in [./notebooks](./notebooks).
+A detailed tutorial and explanation is provided in [./notebooks](./notebooks). These are also available as Google Colab notebooks: 
+- [00-quickstart.ipynb](https://colab.research.google.com/drive/1f1qvdxr8rzLII4kEKrVF0W2Fqe2emLy9?usp=sharing)
+- [01-target-matching.ipynb](https://colab.research.google.com/drive/1DCZJNJwD7VWiyCOE2-ORq_k1J8ERNGrV?usp=sharing)
+- [02-attribute-assertion.ipynb](https://colab.research.google.com/drive/1P7qUnB-k7B_JzcS1ZpwF_eVZjFnkcF52?usp=sharing)
+- [03-document-classification.ipynb](https://colab.research.google.com/drive/1fzgMtbd58-A9F7eaHh_2mN4aYBCOPgTY?usp=sharing)
+- [04-fixing-errors](https://colab.research.google.com/drive/1gRqZlWBfTLbotKvP71--e2NvZv8ydiPu?usp=sharing)
 
 ## Installation
 You can install `cov_bsv` using pip:
