@@ -206,7 +206,7 @@ def load(model="default", enable=None, disable=None, load_rules=True, set_attrib
     return nlp
 
 
-def visualize_doc(doc, document_id=None, jupyter=True):
+def visualize_doc(doc, document_id=None, jupyter=True, colors=None):
     """Display a processed doc using an NER-style spaCy visualization.
     By default, this will highlight entities, modifiers, and section titles
     and will display the document classification as a header.
@@ -222,7 +222,7 @@ def visualize_doc(doc, document_id=None, jupyter=True):
     html = "<h2>Document Classification: {0}</h2>".format(doc._.cov_classification)
     if document_id is not None:
         html += "<h3>Document ID: {0}</h3>".format(document_id)
-    html += visualize_ent(doc, jupyter=False)
+    html += visualize_ent(doc, colors=colors, jupyter=False)
     if jupyter is True:
         display(HTML(html))
     else:
