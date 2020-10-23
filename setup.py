@@ -9,15 +9,16 @@ with open(path.join(this_directory, "README.md"), encoding="utf-8") as f:
 
 setup(
     name="cov_bsv",
-    version="0.0.1.1",
+    version="0.0.1.2",
     description="An NLP pipeline for COVID-19 surveillance used in the Department of Veterans Affairs Biosurveillance.",
     author="alec.chapman",
     author_email="alec.chapman@hsc.utah.edu",
     # packages=["cov_bsv",],
     packages=find_namespace_packages(include=["cov_bsv", "cov_bsv.knowledge_base"]),
     install_requires=[
-        "spacy>=2.2.2,<2.3",
+        "spacy<3.0.0",
         "medspacy==0.0.1.1",
+	"cycontext==1.0.3.1",
     ],
     long_description=long_description,
     long_description_content_type="text/markdown",

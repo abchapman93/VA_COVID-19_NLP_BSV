@@ -1,6 +1,6 @@
 # VA_COVID-19_NLP_BSV
 An NLP pipeline for COVID-19 surveillance used in the Department of Veterans Affairs Biosurveillance.
-This system is described in [A Natural Language Processing System for National COVID-19 Surveillance in the US Department of Veterans Affairs](https://openreview.net/forum?id=ZQ_HvBxcdCv)
+This system is described in [A Natural Language Processing System for National COVID-19 Surveillance in the US Department of Veterans Affairs](https://www.aclweb.org/anthology/2020.nlpcovid19-acl.10/)
 by Chapman et al as part of the [ACL COVID-19 Emergency Workshop](https://www.nlpcovid19workshop.org/).
 
 Our system was deployed as part of the VA response to the COVID-19 pandemic and has helped to identify a large number
@@ -92,3 +92,22 @@ If you have any questions or comments, or if you have applied NLP to help combat
 we'd love to hear from you! Feel free to reach out using the contact information below.
 - **Primary Developer:** Alec Chapman
 - **Email Address:** alec.chapman@hsc.utah.edu
+
+# Cite This Wrok
+You can cite this work using the following BibTex citation:
+```@inproceedings{chapman-etal-2020-natural,
+    title = "A Natural Language Processing System for National {COVID-19} Surveillance in the {US Department of Veterans Affairs}",
+    author = "Chapman, Alec  and
+      Peterson, Kelly  and
+      Turano, Augie  and
+      Box, Tam{\'a}ra  and
+      Wallace, Katherine  and
+      Jones, Makoto",
+    booktitle = "Proceedings of the 1st Workshop on {NLP} for {COVID-19} at {ACL} 2020",
+    month = jul,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/2020.nlpcovid19-acl.10",
+    abstract = "Timely and accurate accounting of positive cases has been an important part of the response to the COVID-19 pandemic. While most positive cases within Veterans Affairs (VA) are identified through structured laboratory results, some patients are tested or diagnosed outside VA so their clinical status is documented only in free-text narratives. We developed a Natural Language Processing pipeline for identifying positively diagnosed COVID19 patients and deployed this system to accelerate chart review. As part of the VA national response to COVID-19, this process identified 6,360 positive cases which did not have corresponding laboratory data. These cases accounted for 36.1{\%} of total confirmed positive cases in VA to date. With available data, performance of the system is estimated as 82.4{\%} precision and 94.2{\%} recall. A public-facing implementation is released as open source and available to the community.",
+}```
