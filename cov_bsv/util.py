@@ -9,9 +9,9 @@ from .knowledge_base import preprocess_rules
 from .knowledge_base import concept_tag_rules
 from .knowledge_base import target_rules
 from .knowledge_base import section_patterns
-from .knowledge_base import context_item_data
+from .knowledge_base import context_rules
 from .knowledge_base import postprocess_rules
-from .knowledge_base import *
+# from .knowledge_base import *
 
 DEFAULT_PIPENAMES = [
     "preprocessor",
@@ -80,7 +80,7 @@ def load(model="default", enable=None, disable=None, load_rules=True, set_attrib
             cov_bsv.knowledge_base.section_patterns.
         - context: Identifies semantic modifiers of entities and asserts attributes such as
             positive status, negation, and other experiencier. Context rules are defined in
-            cov_bsv.knowledge_base.context_item_data.
+            cov_bsv.knowledge_base.context_rules.
         - postprocessor: Modifies or removes the entity based on business logic. This handles
             special cases or complex logic using the results of earlier entities. Postprocess rules
             are defined in cov_bsv.knowledge_base.postprocess_rules.
@@ -171,11 +171,11 @@ def load(model="default", enable=None, disable=None, load_rules=True, set_attrib
         nlp.add_pipe(target_matcher)
 
     if "sectionizer" in enable:
-        from medspacy.section_detection import Sectionizer
-
-        sectionizer = Sectionizer(nlp, patterns=None, add_attrs=SECTION_ATTRS)
+        from medspacy.section_detection import Sectionizer, section_patterns_to_rules
+        rules = section_patterns_to_rules(section_patterns)
+        sectionizer = Sectionizer(nlp, rules=None, add_attrs=SECTION_ATTRS)
         if load_rules:
-            sectionizer.add(section_patterns)
+            sectionizer.add(rules)
         nlp.add_pipe(sectionizer)
 
     if "context" in enable:
@@ -188,7 +188,7 @@ def load(model="default", enable=None, disable=None, load_rules=True, set_attrib
             remove_overlapping_modifiers=True,
         )
         if load_rules:
-            context.add(context_item_data)
+            context.add(context_rules)
         nlp.add_pipe(context)
 
     if "postprocessor" in enable:
