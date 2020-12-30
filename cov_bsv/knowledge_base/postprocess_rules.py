@@ -150,7 +150,7 @@ postprocess_rules = [
     PostprocessingRule(
         patterns=[
             PostprocessingPattern(lambda ent: ent.label_ == "COVID-19"),
-            PostprocessingPattern(lambda ent: ent._.section_title in ["diagnoses", "problem_list", "past_medical_history"]),
+            PostprocessingPattern(lambda ent: ent._.section_category in ["diagnoses", "problem_list", "past_medical_history"]),
             PostprocessingPattern(
                 postprocessing_functions.is_modified_by_category,
                 condition_args=("TEST",),

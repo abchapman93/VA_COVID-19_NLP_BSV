@@ -3,7 +3,7 @@ from .target_rules import target_rules
 from .context_rules import context_rules
 from .postprocess_rules import postprocess_rules
 from .preprocess_rules import preprocess_rules
-from .section_patterns import section_patterns
+from .section_rules import section_rules
 
 
 __all__ = [
@@ -12,5 +12,5 @@ __all__ = [
     "context_rules",
     "postprocess_rules",
     "preprocess_rules",
-    "section_patterns",
+    "section_rules",
 ]

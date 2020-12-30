@@ -8,7 +8,7 @@ from .document_classifier import DocumentClassifier
 from .knowledge_base import preprocess_rules
 from .knowledge_base import concept_tag_rules
 from .knowledge_base import target_rules
-from .knowledge_base import section_patterns
+from .knowledge_base import section_rules
 from .knowledge_base import context_rules
 from .knowledge_base import postprocess_rules
 # from .knowledge_base import *
@@ -171,11 +171,10 @@ def load(model="default", enable=None, disable=None, load_rules=True, set_attrib
         nlp.add_pipe(target_matcher)
 
     if "sectionizer" in enable:
-        from medspacy.section_detection import Sectionizer, section_patterns_to_rules
-        rules = section_patterns_to_rules(section_patterns)
+        from medspacy.section_detection import Sectionizer
         sectionizer = Sectionizer(nlp, rules=None, add_attrs=SECTION_ATTRS)
         if load_rules:
-            sectionizer.add(rules)
+            sectionizer.add(section_rules)
         nlp.add_pipe(sectionizer)
 
     if "context" in enable:
