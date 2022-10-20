@@ -93,7 +93,7 @@ we'd love to hear from you! Feel free to reach out using the contact information
 - **Primary Developer:** Alec Chapman
 - **Email Address:** alec.chapman@hsc.utah.edu
 
-# Cite This Wrok
+# Cite This Work
 You can cite this work using the following BibTex citation:
 ```@inproceedings{chapman-etal-2020-natural,
     title = "A Natural Language Processing System for National {COVID-19} Surveillance in the {US Department of Veterans Affairs}",
